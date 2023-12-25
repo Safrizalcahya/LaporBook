@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB-d7pyol38AIBb39bi5sue9g4nvlGSSC4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>582591532046</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.laporBookBk.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>lapor-book-bk-37704</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lapor-book-bk-37704.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:582591532046:ios:9e9cb6e9439e961ca3805f</string>
+</dict>
+</plist>
