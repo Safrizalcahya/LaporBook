@@ -85,34 +85,45 @@ class _RegisterPageState extends State<RegisterPage> {
                           key: _formKey,
                           child: Column(
                             children: [
-                              InputLayout('Nama', TextFormField(onChanged: (String value)=> setState(() {
+                              InputLayout(
+                                'Nama', 
+                                TextFormField(
+                                  onChanged: (String value)=> setState(() {
                                 nama = value;
                               }),
                               validator: notEmptyValidator,
                               decoration: customInputDecoration("Nama Lengkap"),
                               )),
-                              InputLayout('Email', TextFormField(onChanged: (String value)=> setState(() {
+                              InputLayout(
+                                'Email', 
+                                TextFormField(
+                                  onChanged: (String value)=> setState(() {
                                 email = value;
                               }),
                               validator: notEmptyValidator,
                               decoration: customInputDecoration("email@gmail.com"),
                               )),
-                              InputLayout('No. Handphone', TextFormField(onChanged: (String value)=> setState(() {
-                                nama = value;
+                              InputLayout(
+                                'No. Handphone', TextFormField(onChanged: (String value)=> setState(() {
+                                noHP = value;
                               }),
                               validator: notEmptyValidator,
                               decoration: customInputDecoration("+62 00000"),
                               )),
-                              InputLayout('Password', TextFormField(
+                              InputLayout(
+                                'Password', TextFormField(
                               controller: _password,
                               validator: notEmptyValidator,
                               obscureText: true,
                               decoration: customInputDecoration(""),
                               )),
-                              InputLayout('Konfirmasi Password', TextFormField(
-                              validator: (value) => passConfirmationValidator(value, _password),
+                              InputLayout(
+                                'Konfirmasi Password', TextFormField(
+                              validator: (value) => 
+                              passConfirmationValidator(
+                                value, _password),
                               obscureText: true,
-                              decoration: customInputDecoration("Nama Lengkap"),
+                              decoration: customInputDecoration(""),
                               )),
                             Container(
                             margin: const EdgeInsets.only(top: 20),
