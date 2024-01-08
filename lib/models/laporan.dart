@@ -26,7 +26,20 @@ class Laporan {
     this.komentar,
   });
 }
+class like {
+  int _jumlahLike;
 
+  like({
+    required int jumlahLike,
+  }) :
+  
+  _jumlahLike = jumlahLike;
+  int get jumlahLike => _jumlahLike;
+
+  void tambahLike() {
+    _jumlahLike++;
+  }
+}
 class Komentar {
   final String nama;
   final String isi;

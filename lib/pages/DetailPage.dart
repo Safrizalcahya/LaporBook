@@ -15,6 +15,9 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+bool _isliked = false;
+int _likeCount = 0;
+
 Future launch(String url) async{
   if(url=='') return;
   if(await launchUrl(Uri.parse(url))){
@@ -74,6 +77,51 @@ Future launch(String url) async{
                     textStatus(laporan.instansi, Colors.white, Colors.black),
                     ],
                 ),
+                //penambahan button like
+                ElevatedButton(
+                    onPressed: () async {
+                      try {
+                        // Tambahkan fungsi untuk menangani tombol Like di sini
+                        // Kirim data user dan timestamp ke server
+
+                        // Simulasi penanganan tombol Like
+                        if (!_isliked) {
+                          // Update jumlah like
+                          setState(() {
+                            _likeCount++;
+                          });
+
+                          // Set state tombol Like agar tidak bisa diklik lagi
+                          setState(() {
+                            _isliked = true;
+                          });
+
+                          // Tambahkan logika penyimpanan data like ke Firestore
+                          // ...
+
+                        } else {
+                          // Tombol Like sudah diklik sebelumnya
+                          // Mungkin berikan pesan atau lakukan tindakan lain
+                          print("Anda sudah memberi like pada laporan ini.");
+                        }
+
+                      } catch (e) {
+                        print("Error: $e");
+                      }
+                    },
+                    child: Text(_isliked ? "Liked" : "Like"),
+                  ),
+
+                SizedBox(
+                  height: 15,
+                ),
+
+                ListTile(
+                  title: Text('Jumlah Like'),
+                  subtitle: Text("$_likeCount"),
+                  leading: Icon(Icons.favorite),
+                ),
+
                 SizedBox(
                   height: 15,
                 ),
@@ -152,4 +200,7 @@ Future launch(String url) async{
                     ),
                   );
   }
+}
+
+class _likeCount {
 }
