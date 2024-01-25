@@ -177,7 +177,64 @@ Future launch(String url) async{
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10))), 
                         child: Text('Ubah status')),
-                    )
+                    ),
+                    SizedBox(
+                    height: 15,
+                  ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    if(akun.role == 'admin')
+                    Container(
+                      width: 250,
+                      child: ElevatedButton(
+                        onPressed: (){
+                          showDialog(
+                          context: context, 
+                          builder: (BuildContext context){
+                            return StatusDialog(
+                              laporan: laporan,
+                            );
+                          });
+                        },
+                      style: 
+                        TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10))), 
+                        child: Text('Tambah Komentar')),
+                    ),
+                    SizedBox(
+                     height: 15,
+                    ),
+                    ListTile(
+                    title: Text('List Komentar'),
+                  ),
+                  SizedBox(
+                      height: 150,
+                    ),
+                    if(akun.role == 'admin')
+                    Container(
+                      width: 350,
+                      child: ElevatedButton(
+                        onPressed: (){
+                          showDialog(
+                          context: context, 
+                          builder: (BuildContext context){
+                            return StatusDialog(
+                              laporan: laporan,
+                            );
+                          });
+                        },
+                      style: 
+                        TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10))), 
+                        child: Text('Nama komentator')),
+                    ),
                   ],
                 ),
               ),
